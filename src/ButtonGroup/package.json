@@ -13,7 +13,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "@audnavlib/button": "^1.0.0"
+        "@cmoosman/button": "^1.0.0"
     },
     "peerDependencies": {
         "react": "^16.8.2",
