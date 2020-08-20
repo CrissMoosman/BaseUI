@@ -1,7 +1,36 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import Button from '@audnavlib/button';
+import React from 'react';
+import Button  from './index';
+import './button.css';
 
-storiesOf("Button", module).add("Default", () => (
-    <Button onClick={() => { alert('You are the best! =)')}}>Click me</Button>
-));
+export default {
+  title: 'Example/Button',
+  component: Button,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+};
+
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+  label: 'Button',
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Button',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: 'large',
+  label: 'Button',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  label: 'Button',
+};
